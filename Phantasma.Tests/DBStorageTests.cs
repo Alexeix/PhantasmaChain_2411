@@ -108,7 +108,7 @@ namespace Phantasma.Tests
         // Changing "test2" to other unique key also helps.
         public void TestDBChangeSetStorageMapClearEmpty()
         {
-            var storage = (StorageContext)new KeyStoreStorage(CreateKeyStoreAdapterTest("test2"));
+            var storage = (StorageContext)new KeyStoreStorage(CreateKeyStoreAdapterTest(nameof(TestDBChangeSetStorageMapClearEmpty)));
             var changeSet = new StorageChangeSetContext(storage);
             var testMapKey = Encoding.UTF8.GetBytes($".test._valueMap");
             var testMap = new StorageMap(testMapKey, changeSet);
@@ -122,7 +122,7 @@ namespace Phantasma.Tests
         [TestMethod]
         public void TestDBChangeSetStorageMap22()
         {
-            var storage = (StorageContext)new KeyStoreStorage(CreateKeyStoreAdapterTest("test2"));
+            var storage = (StorageContext)new KeyStoreStorage(CreateKeyStoreAdapterTest(nameof(TestDBChangeSetStorageMap22)));
             var changeSet = new StorageChangeSetContext(storage);
             var testMapKey = Encoding.UTF8.GetBytes($".test._valueMap");
             var testMap = new StorageMap(testMapKey, changeSet);
